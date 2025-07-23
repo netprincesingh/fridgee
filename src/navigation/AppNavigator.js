@@ -5,7 +5,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 
 import ListScreen from "../screens/ListScreen.tsx";
 import AddItemScreen from "../screens/AddItemScreen.tsx";
-import ProfileScreen from "../screens/ProfileScreen.tsx";
+
 
 
 const Tab = createBottomTabNavigator();
@@ -27,10 +27,7 @@ export default function AppNavigator(){
                     {
                         iconName = focused? 'fridge' : 'fridge-outline';
                     }
-                    else if(route.name === 'ProfileScreen')
-                    {
-                        iconName = focused?'account' : 'account-outline';
-                    }
+                   
                     return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
                 },
                 tabBarActiveTintColor:'green',
@@ -54,7 +51,7 @@ export default function AppNavigator(){
         >
             <Tab.Screen name="ListScreen" component={ListScreen} options={{title:"List"}} />
             <Tab.Screen name="AddItemScreen" component={AddItemScreen} options={{title:"Add"}} />
-            <Tab.Screen name="ProfileScreen" component={ProfileScreen} options={{title:"Profile"}} />
+            
         
         </Tab.Navigator>
 
