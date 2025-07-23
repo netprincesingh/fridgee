@@ -1,6 +1,6 @@
 // src/store/slices/authSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { login, register, logout } from '../../../services/firebase'; 
+import { login, register, logout } from "../../../services/firebase.js"
 
 
 
