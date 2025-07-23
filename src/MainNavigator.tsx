@@ -8,7 +8,7 @@ import auth, { firebase } from '@react-native-firebase/auth';
 import { setUser } from './redux/store/slices/authSlice';
 
 export default function MainNavigator() {
-  /*
+  
   const dispatch = useDispatch(); 
 
   const user = useSelector((state) => state.auth.user);
@@ -21,13 +21,13 @@ export default function MainNavigator() {
 
     return unsubscribe;
   }, []);
-*/
-  const isUserLogin = true;
+
+  //const isUserLogin = true;
 
   return (
     <NavigationContainer>
       <SafeAreaProvider>
-        {isUserLogin? <MainStack /> : <AuthNavigator />}
+        {user? <MainStack /> : <AuthNavigator />}
       </SafeAreaProvider>
     </NavigationContainer>
   );

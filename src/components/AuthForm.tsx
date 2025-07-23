@@ -26,7 +26,7 @@ export default function AuthForm({route,navigation}){
         }
         catch(err)
         {
-            setError(err.message);
+            setError(err);
         }
     };
 
@@ -53,7 +53,7 @@ export default function AuthForm({route,navigation}){
                     secureTextEntry
                 />
 
-                <TouchableOpacity style = {styles.button} onPress={handleSubmit} onPress={handleSubmit}>
+                <TouchableOpacity style = {styles.button} onPress={handleSubmit}>
                     <Text style = {styles.buttonText}>
                         {isLogin? 'Login' : 'Create Account'}
                     </Text>
