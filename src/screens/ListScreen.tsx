@@ -48,12 +48,12 @@ const ListScreen = () => {
         ]);
     }
 
-   
 
-    
+
+
     const renderItem = ({ item }) => {
-    const remainingDays = calculateDaysLeft(item.expiry);
-    
+        const remainingDays = calculateDaysLeft(item.expiry);
+
         return (
             <TouchableOpacity
                 style={styles.itemCard}
@@ -65,12 +65,12 @@ const ListScreen = () => {
             >
                 <View>
                     <Text style={styles.itemName}>{item.name}</Text>
-                    {(remainingDays < 1)?
-                    (<Text style = {{color:'red'}}>Expired</Text>)
-                    :
-                    (<Text style={styles.itemExpiry}>Expire in days: {remainingDays}</Text>)
+                    {(remainingDays < 1) ?
+                        (<Text style={{ color: 'red' }}>Expired</Text>)
+                        :
+                        (<Text style={styles.itemExpiry}>Expire in days: {remainingDays}</Text>)
                     }
-                    
+
                 </View>
                 <TouchableOpacity onPress={() => handleDelete(item.id)}>
                     <MaterialCommunityIcons name="delete" size={24} color="red" />
@@ -91,9 +91,9 @@ const ListScreen = () => {
                     onPress={() => setFilter('red')}
                 >
                     {(filter === 'red') ?
-                    ( <View style ={styles.filterButtonRedIn}></View>)
-                    :
-                    (<View></View>)
+                        (<View style={styles.filterButtonRedIn}></View>)
+                        :
+                        (<View></View>)
 
                     }
                 </TouchableOpacity>
@@ -103,9 +103,9 @@ const ListScreen = () => {
                     onPress={() => setFilter('blue')}
                 >
                     {(filter === 'blue') ?
-                    ( <View style ={styles.filterButtonBlueIn}></View>)
-                    :
-                    (<View></View>)
+                        (<View style={styles.filterButtonBlueIn}></View>)
+                        :
+                        (<View></View>)
 
                     }
                 </TouchableOpacity>
@@ -115,16 +115,16 @@ const ListScreen = () => {
                     onPress={() => setFilter('green')}
                 >
                     {(filter === 'green') ?
-                    ( <View style ={styles.filterButtonGreenIn}></View>)
-                    :
-                    (<View></View>)
+                        (<View style={styles.filterButtonGreenIn}></View>)
+                        :
+                        (<View></View>)
 
                     }
 
                 </TouchableOpacity>
 
             </View>
-            <View style= {styles.buttonRow}>
+            <View style={styles.buttonRow}>
                 <Text style={styles.infoText}>2 days</Text>
                 <Text style={styles.infoText}>                   All</Text>
                 <Text style={styles.infoText}>More than 2 days</Text>
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     },
     itemExpiry: {
         fontSize: 14,
-        color: "#555",
+        color: "#555555",
 
     },
     container: {
@@ -182,51 +182,51 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginBottom: 16,
     },
-    filterButtonRed:{
-        width:40,
-        height:40,
-        borderRadius:20,
-        borderColor:'red',
-        borderWidth:5,
-        padding:2.5,
+    filterButtonRed: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        borderColor: 'red',
+        borderWidth: 5,
+        padding: 2.5,
 
     },
-    filterButtonRedIn:{
-        width:25,
-        height:25,
-        borderRadius:20,
-        backgroundColor:'red',
-        
+    filterButtonRedIn: {
+        width: 25,
+        height: 25,
+        borderRadius: 20,
+        backgroundColor: 'red',
+
     },
-    filterButtonBlue:{
-        width:40,
-        height:40,
-        borderRadius:20,
-        borderColor:'blue',
-        borderWidth:5,
-        padding:2.5,
+    filterButtonBlue: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        borderColor: 'blue',
+        borderWidth: 5,
+        padding: 2.5,
     },
-    filterButtonBlueIn:{
-        width:25,
-        height:25,
-        borderRadius:20,
-        backgroundColor:'blue',
-        
+    filterButtonBlueIn: {
+        width: 25,
+        height: 25,
+        borderRadius: 20,
+        backgroundColor: 'blue',
+
     },
-    filterButtonGreen:{
-        width:40,
-        height:40,
-        borderRadius:20,
-        borderColor:'green',
-        borderWidth:5,
-        padding:2.5,
+    filterButtonGreen: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        borderColor: 'green',
+        borderWidth: 5,
+        padding: 2.5,
     },
-    filterButtonGreenIn:{
-        width:25,
-        height:25,
-        borderRadius:20,
-        backgroundColor:'green',
-        
+    filterButtonGreenIn: {
+        width: 25,
+        height: 25,
+        borderRadius: 20,
+        backgroundColor: 'green',
+
     },
     emptyContainer: {
         flex: 1,
@@ -237,8 +237,8 @@ const styles = StyleSheet.create({
         fontSize: 26,
         color: '#999',
     },
-    infoText:{
-        fontSize:10,
+    infoText: {
+        fontSize: 10,
     }
 
 });
